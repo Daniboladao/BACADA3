@@ -1,13 +1,17 @@
 <html>
-	<head>
-		<title>Bem vindo ao Cadastro</title>
-	</head>
-	<body>
-		<h1>Cadastro</h1>
-		<form action="cgi-bin/login.cgi" method="post">
-			login:<input type="text" name="lg"><br/><br/>
-			senha:<input type="password" name="sn" ><br/><br/>
-			<input type="submit" value="Enviar">
-			</form>
-	</body>
+        <head>
+        <link href="./style.css" rel="stylesheet" >
+                <title>Bem vindo ao Cadastro</title>
+        </head>
+        <body>
+        <center><h1 class="titulo">Cadastro</h1></center>
+                <p class="sub">pagina de teste</p>
+                <form class="formulario" action="cgi-bin/login.cgi" method="post">
+                                <label for="lg" class="user" >login</label>
+                                <input type="text" name="lg"><br/><br/>
+                                <label for="ps" class="user" >senha</label>
+                        <input type="text" name="ps"><br/><br/>
+                        <input type="submit" value="Enviar" class="formulario__botao">
+                        </form>
+        </body>
 </html>
