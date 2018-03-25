@@ -1,28 +1,42 @@
-
-#!/usr/bin/ptyhon
+#!/usr/bin/python
 #-*- coding: utf8 -*-
+
 var=raw_input()
 menu=var.split("=")[0]
-print("content-type: text/html")
-print("<h1>")
-if menu == "f_i":
-        print("Firewall inicia")
-elif menu == "f_p":
-        print("Parar Firewall")
-elif menu == "f_r":
-        print("Reiniciar Firewall")
-elif menu == "d_i":
-        print("Iniciar DNS")
-elif menu == "d_p":
-        print("parar DNS")
-elif menu == "d_r":
-        print("Reiniciar DNS")
-elif menu == "n_i":
-        print("Iniciar Nagios")
-elif menu == "n_p":
-        print("Parar Nagios")
-elif menu == "n_r":
-        print("Reiniciar Nagios")
-else:
-        print("Nenhum processo válido")
-print("</h1>")
+
+def cabecalho():
+	print("content-type: text/html")
+	print("")
+
+def Gerencia():
+	cabecalho()
+	ge = open("/var/www/html/gerencia.html", "r")
+	html=ge.read()
+	ge.close()
+	print(html)
+
+def Agendar():
+	cabecalho()
+	ag = open("/var/www/html/agendar.html", "r")
+	html=ag.read()
+	ag.close()
+	print(html)
+
+def Processos():
+	cabecalho()
+	print("<link href='/styles.css' rel='stylesheet'>")
+	print ("<h1 class='titulo'>Processos<h1/>")
+	print ("<textarea rows='100' cols='100' >")
+	ps = open("/var/www/html/cgi-bin/processos.log", "r")
+	html=ps.read()
+	ps.close()
+	print(html)
+	print ("</textarea>")
+
+
+if menu == "GE":
+	Gerencia()
+elif menu == "AG":
+	Agendar()
+elif menu == "PS":
+	Processos()	
