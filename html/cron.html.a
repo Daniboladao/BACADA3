@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<title>Ag. de Tarefas</title>
+	</head>
+	<body>
+		<center>
+		<h1>Ag. de Tarefas</h1>
+		<br/>
+		<hr/>
+		<form action="cgi-bin/cron.cgi" method="post">
+			Minuto:<br/>
+			(ex: 0-59)<br/>
+			<input type="text" name="min"><br/><br/>
+			Hora:<br/>
+			(ex: 0-23)<br/>
+			<input type="text" name="hor"><br/><br/>
+			Dia do Mês:<br/>
+			(ex: 1-31)<br/>
+			<input type="text" name="dia"><br/><br/>
+			Mês:<br/>
+			(ex: 1-12)<br/>
+			<input type="text" name="mes"><br/><br/>
+			Dia da Semana:<br/>
+			(0-7, 0=Dom, 1=Seg...7=Dom)<br/>
+			<input type="text" name="sem"><br/><br/>
+			Usuario:<br/>
+			(nome do usuario)<br/>
+			<input type="password" name= "usr"><br/><br/>
+			Comando:<br/>
+			(ex: ping 8.8.8.8)<br/>
+			<input type="password" name= "cmd"><br/><br/>
+
+			<input type="submit" value= "Agendar">
+		</form>
+		</center>
+	</body>
+</html>
