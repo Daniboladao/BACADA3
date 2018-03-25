@@ -26,7 +26,7 @@ def Processos():
 	cabecalho()
 	print("<link href='/styles.css' rel='stylesheet'>")
 	print ("<h1 class='titulo'>Processos<h1/>")
-	print ("<textarea rows='100' cols='100' >")
+	print ("<textarea rows='100' cols='100' class='user' >")
 	ps = open("/var/www/html/cgi-bin/processos.log", "r")
 	html=ps.read()
 	ps.close()
